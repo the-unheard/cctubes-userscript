@@ -1,0 +1,246 @@
+:root {
+    --main-bg-color: radial-gradient(circle at top center, rgba(50, 80, 160, 0.6), rgba(120, 60, 200, 0.4), transparent 105% ), #000;
+    --main-secondary-color: #130a2766;
+    --main-secondary-lighter-color: #221244;
+    --table-default-row: #130a2766;
+    --table-highlighted-row: rgba(120, 60, 200, 0.5);
+    --button-positive-color: linear-gradient(to right, rgba(50, 80, 160, 0.7), rgba(120, 60, 200, 0.5));
+    --button-negative-color: linear-gradient(to right, rgba(50, 80, 160, 0.7), rgba(120, 60, 200, 0.5));
+    --font-white: #ffffffaa;
+}
+
+html {
+    margin-top: 0 !important;
+    height: 100%;
+}
+
+body {
+    background: var(--main-bg-color) !important;
+    color: #dddddd !important;
+}
+
+/* HEADER --------------------------------------------------- */
+
+#header {
+    border-bottom: none !important;
+    margin: 10px auto;
+    background: transparent !important;
+}
+
+#logo {
+    border-right: none;
+    box-shadow: none;
+}
+
+#logo img {
+    filter: hue-rotate(215deg);
+}
+
+#header-social {
+    border-left: none;
+    box-shadow: none;
+}
+
+body #navigation-wrapper {
+    background: var(--main-secondary-color) !important;
+}
+
+#navigation-wrapper ul.menu li a {
+    color: var(--font-white);
+}
+
+#header-search input::placeholder {
+    color: var(--font-white);
+}
+
+
+/* Header - Caption Requests button */
+
+.current-menu-item a {
+    background-color: transparent !important;
+}
+
+/* Header - Subscribe button */
+
+#navigation-wrapper ul.menu li.upgrade-link a {
+    background: transparent !important;
+    font-weight: unset;
+    color: var(--font-white);
+}
+
+/* LEFT BIG BOXES-------------------------------------------- */
+
+/* title that says Caption Requests */
+.container:nth-of-type(3) > .row:nth-of-type(1) {
+    display: none;
+}
+
+.dash-container {
+    background: var(--main-secondary-color) !important;
+    color: var(--font-white) !important;
+    border-radius: 5px;
+}
+
+.dash-container hr {
+    border: 1px solid #ffffff22 !important;
+    border-bottom: none !important;
+}
+
+/* TABLE GENERAL -------------------------------------------- */
+
+table {
+    border: none !important;
+    background: transparent;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    top: -4px;
+    left: 5px;
+    position: relative;
+}
+
+table a {
+    color: var(--font-white);
+}
+
+
+table tr {
+    background: var(--table-default-row);
+}
+
+table th {
+    background-color: var(--main-secondary-lighter-color) !important;
+    border-bottom: none !important;
+    height: 50px;
+    vertical-align: middle !important;
+    color: var(--font-white);
+}
+
+table td {
+    border-top: none !important;
+    vertical-align: middle !important;
+    color: var(--font-white);
+}
+
+.page-numbers {
+    border-radius: 0 !important;
+}
+
+/* AVAILABLE VIDEOS TABLE------------------------------------ */
+
+
+#tabledata tr th:nth-of-type(1), #tabledata tr th:nth-of-type(2), #tabledata tr td:nth-of-type(1), #tabledata tr td:nth-of-type(2) {
+    display: none;
+}
+
+/* titles th */
+#tabledata th:nth-of-type(3) {
+    width: 610px;
+    padding-left: 20px;
+}
+
+#tabledata th:nth-of-type(4) {
+    width: 110px;
+}
+
+/* CLAIMED VIDEOS TABLE-------------------------------------- */
+
+/* titles th */
+#tabledata2 > thead > tr > th:nth-child(3) {
+    width: 490px;
+    padding-left: 20px;
+}
+
+/* minutes th */
+#tabledata2 > thead > tr > th:nth-child(4) {
+    width: 80px;
+}
+
+/* edit th */
+#tabledata2 > thead > tr > th:nth-child(5) {
+    width: 40px;
+}
+
+/* unclaim th */
+#tabledata2 > thead > tr > th:nth-child(6) {
+    width: 80px;
+}
+
+/* titles */
+#tabledata2 > tbody > tr > td:nth-child(3) {
+    padding-left: 20px;
+}
+
+/* minutes */
+#tabledata2 > tbody > tr > td:nth-child(4) {
+    text-align: right;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#tabledata2 tr th:nth-of-type(1), #tabledata2 tr th:nth-of-type(2), #tabledata2 tr td:nth-of-type(1), #tabledata2 tr td:nth-of-type(2) {
+    display: none;
+}
+
+/* submitted videos highlight */
+
+.cr-submitted {
+    box-shadow: 7px 0 0 0 var(--table-highlighted-row) inset;
+    padding-left: 20px !important;
+    color: #fff;
+}
+
+/* BUTTONS */
+
+.btn-success {
+    background: var(--button-positive-color) !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 14px !important;
+}
+
+.btn-danger {
+    background: var(--button-negative-color) !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 14px !important;
+}
+
+.pagination {
+    margin-left: 6px !important;
+}
+
+/* Bruteforce Button Change - Base is annoying because it has !overwrite already */
+
+.pagination a.page-numbers, .pagination a.current, .pagination a, .pagination li a, .pagination li a.current {
+    border: none !important;
+    background: var(--main-secondary-lighter-color) !important;
+}
+
+.pagination a.page-numbers:hover, .pagination a.current:hover, .pagination a:hover, .pagination li a:hover {
+    background: var(--main-secondary-lighter-color) !important;
+}
+
+
+/* Removes Submitted Table */
+
+.container>.row:nth-of-type(4) {
+    display: none;
+}
+
+/* Removes Completed Videos Table */
+
+.container>.row:nth-of-type(6) {
+    display: none;
+}
+
+/* Removes Footer */
+
+#footer {
+    display: none;
+}
+
+
+
