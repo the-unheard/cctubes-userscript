@@ -1,0 +1,370 @@
+:root {
+    --main-bg-color: #110d1a;
+    --main-secondary-color: #1f1b24;
+    --main-secondary-lighter-color: #1f1b24;
+    --table-default-row: #21182f;
+    --table-highlighted-row: rgba(120, 60, 200, 0.5);
+    --button-positive-color: #feb600;
+    --button-negative-color: #8C2B4F;
+    --yellow: #feb600;
+    --font-white: #ffffff;
+    --font-black: #1a1326;
+    --light-purple-gradient: linear-gradient(to right, #1e1528, #241a32)
+}
+
+html {
+    margin-top: 0 !important;
+    height: 100%;
+}
+
+body {
+    background: var(--main-bg-color) !important;
+    color: #dddddd !important;
+}
+
+.container {
+    width: auto !important;
+}
+
+/* HEADER --------------------------------------------------- */
+
+.container:nth-of-type(1) .row {
+    display: flex;
+}
+
+#header {
+    border-bottom: none !important;
+    margin: 0 auto 20px auto;
+    background: var(--light-purple-gradient) !important;
+}
+
+#logo {
+    border-right: none !important;
+    box-shadow: none !important;
+    width: 100px;
+    margin-left: 50px;
+    padding: 0 !important;
+}
+
+#logo img {
+    width: 100px !important;
+}
+
+#header-social {
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+body #navigation-wrapper {
+    background: transparent !important;
+    width: auto;
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+body #navigation-wrapper .container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 8vh;
+}
+
+#navigation-wrapper ul.menu {
+    margin-right: 400px;
+}
+
+#navigation-wrapper ul.menu li {
+    padding-right: 30px;
+}
+
+#navigation-wrapper ul.menu li a {
+    color: var(--font-white);
+}
+
+/* Header - Caption Requests button */
+
+nav .current-menu-item a {
+    background-color: transparent !important;
+}
+
+/* Header - Subscribe button */
+
+#navigation-wrapper ul.menu li.upgrade-link a {
+    background: transparent !important;
+    font-weight: unset;
+    color: var(--font-white) !important;
+}
+
+#header-search {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+
+#header-social {
+    float: unset;
+    width: auto;
+    position: relative;
+}
+
+/* Form alignment */
+#header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header form span {
+    top: 10px !important;
+    position: relative;
+}
+
+#header form input {
+    background: #2c2039;
+    padding: 10px;
+    height: 36px;
+    font-size: 13px;
+    border-radius: 7px;
+}
+
+#header-search input::placeholder {
+    color: #ffffff33;
+}
+
+/* TABLE GENERAL -------------------------------------------- */
+
+.container:nth-of-type(2) {
+    display: flex;
+    margin-top: 40px !important;
+}
+
+/* table containers */
+.container:nth-of-type(2) > .row {
+    background: linear-gradient(90deg,rgba(26, 19, 38, 1) 0%, rgba(35, 19, 38, 0.7) 100%);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    width: 48%;
+    margin: 0 auto !important;
+    position: relative !important;
+    padding: 40px 40px 10px 40px;
+    border-radius: 10px;
+}
+
+/* title that says Caption Requests */
+.container:nth-of-type(2) > .row:nth-of-type(1) {
+    display: none;
+}
+
+.container:nth-of-type(2) > .row > div:nth-of-type(2) {
+    width: 100% !important;
+}
+
+.dash-container {
+    background: transparent !important;
+    color: var(--font-white) !important;
+    border-radius: 5px;
+    width: 100% !important;
+    display: flex;
+    min-height: auto !important;
+    justify-content: space-between;
+    padding: 0 !important;
+    margin-bottom: 30px;
+}
+
+.dash-container hr {
+    display: none;
+}
+
+.dash-container .dash-number {
+    background: var(--light-purple-gradient);
+    color: var(--font-white) !important;
+    border-radius: 20px;
+    padding: 5px 15px;
+    top: -2px;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+.dash-container .dash-number strong {
+    font-size: 13px !important;
+    font-weight: 600;
+}
+
+.dash-container .dash-number span {
+    font-size: 13px !important;
+    padding-left: 3px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.dash-container .row {
+    margin: 0 !important;
+}
+
+table {
+    border: none !important;
+    background: transparent;
+    border-collapse: separate !important;
+    border-spacing: 0 13px !important;
+    top: -4px;
+    left: 5px;
+    position: relative;
+}
+
+table a {
+    color: var(--font-white);
+}
+
+
+table tr {
+    background: transparent !important;
+    border-radius: 10px;
+    height: 70px;
+}
+
+thead {
+    display: none;
+}
+
+table td {
+    border-top: none !important;
+    vertical-align: middle !important;
+    color: var(--font-white);
+}
+
+/* BOTH AVAILABLE & CLAIMED TABLE --------------------------- */
+
+/* titles and minutes under it */
+
+#tabledata > tbody > tr > td:nth-child(3), #tabledata2 > tbody > tr > td:nth-child(3) {
+    padding-left: 20px;
+    background: var(--table-default-row);
+    border-radius: 10px 0 0 10px;
+}
+
+#tabledata > tbody > tr > td:nth-child(3) a, #tabledata2 > tbody > tr > td:nth-child(3) a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#tabledata > tbody > tr > td:nth-child(3) p, #tabledata2 > tbody > tr > td:nth-child(3) p {
+    margin: 0px;
+    font-size: 13px;
+    font-weight: unset !important;
+    color: #a1a1aa;
+}
+
+/* AVAILABLE VIDEOS TABLE------------------------------------ */
+
+#tabledata tr th:nth-of-type(1), #tabledata tr th:nth-of-type(2), #tabledata tr td:nth-of-type(1), #tabledata tr td:nth-of-type(2) {
+    display: none;
+}
+
+/* titles */
+#tabledata > tbody > tr > td:nth-child(3) {
+    width: 420px;
+}
+
+/* claim buttons column */
+#tabledata > tbody > tr > td:nth-child(5) {
+    background: var(--table-default-row);
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+}
+
+/* CLAIMED VIDEOS TABLE-------------------------------------- */
+
+/* titles */
+#tabledata2 > tbody > tr > td:nth-child(3) {
+    width: 610px;
+}
+
+/* minutes */
+#tabledata > tbody > tr > td:nth-child(4), #tabledata2 > tbody > tr > td:nth-child(4) {
+    display: none;
+}
+
+/* success column */
+#tabledata2 > tbody > tr > td:nth-child(5) {
+    background: var(--table-default-row);
+    width: 50px;
+}
+
+/* unclaim column */
+#tabledata2 > tbody > tr > td:nth-child(6) {
+    background: var(--table-default-row);
+    width: 70px;
+    border-radius: 0 10px 10px 0;
+}
+
+#tabledata2 tr th:nth-of-type(1), #tabledata2 tr th:nth-of-type(2), #tabledata2 tr td:nth-of-type(1), #tabledata2 tr td:nth-of-type(2) {
+    display: none;
+}
+
+/* submitted videos highlight */
+
+.cr-submitted {
+    padding-left: 20px !important;
+    color: #fff;
+}
+
+.cr-submitted td:nth-of-type(3) {
+    border-left: 1px solid var(--button-negative-color);
+}
+
+/* BUTTONS */
+
+a.btn-success {
+    background-color: var(--button-positive-color) !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 14px !important;
+}
+
+a.btn-danger {
+    background-color: var(--button-negative-color) !important;
+    background-image: none !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 14px !important;
+}
+
+/* Bruteforce Button Change - Base is annoying because it has !overwrite already */
+
+.pagination {
+    margin-left: 6px !important;
+    display: flex;
+    gap: 10px;
+    float: right;
+}
+
+.pagination a.page-numbers, .pagination a.current, .pagination a, .pagination li a, .pagination li a.current {
+    background: var(--light-purple-gradient) !important;
+    color: var(--font-white) !important;
+    border: none !important;
+    border-radius: 7px !important;
+}
+
+.pagination a.page-numbers:hover, .pagination a.current:hover, .pagination a:hover, .pagination li a:hover {
+    background: var(--main-secondary-lighter-color) !important;
+}
+
+
+/* Removes Submitted Table */
+
+.container>.row:nth-of-type(4) {
+    display: none;
+}
+
+/* Removes Completed Videos Table */
+
+.container>.row:nth-of-type(6) {
+    display: none;
+}
+
+/* Removes Footer */
+
+#footer {
+    display: none;
+}
